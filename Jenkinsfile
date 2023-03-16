@@ -20,7 +20,7 @@ pipeline {
       agent { label 'tomcat-deploy' }
       steps {
         sh """
-             wget --http-user=${jfrog_user}  --http-password=${jfrog_pass} https://devops400.jfrog.io/artifactory/devops/com/mycompany/app/my-app-ravi/2.0/my-app-rama-2.0.war
+             wget --http-user=${jfrog_user}  --http-password=${jfrog_pass} https://devops400.jfrog.io/artifactory/devops/com/mycompany/app/my-app-rama/2.0/my-app-rama-2.0.war
              mv my-app-rama-2.0.war my-app-rama.war
              cp my-app-rama.war /home/rocky/tomcat/tomcat9/webapps/
           """
